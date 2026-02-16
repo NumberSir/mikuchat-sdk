@@ -4,7 +4,7 @@
 ## 简介
 全异步编写，可调用 MikuChat-Api
 
-安装：`uv add mikuchat-sdk`
+安装：`uv add MikuChatSDK`
 
 ## 使用说明
 1. 在项目根目录下新建 `.env` 文件，并在其中填写环境变量：
