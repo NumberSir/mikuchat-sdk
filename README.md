@@ -1,4 +1,4 @@
-# Yuuz12-Api
+# MikuChat-Api
 > 文档地址: https://doc.yuuz12.top/web/#/5/103
 
 ## 简介
