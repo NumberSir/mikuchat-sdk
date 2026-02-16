@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 load_dotenv()
 
 class Config(BaseSettings):
-    model_config = SettingsConfigDict(env_prefix="YUUZ12_")
+    model_config = SettingsConfigDict(env_prefix="MIKUCHAT_")
 
     api_version: int = Field(default=2)
     api_key: dict[int, str] = Field(default_factory=dict)
