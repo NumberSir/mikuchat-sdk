@@ -1,13 +1,12 @@
-import httpx
 from ._api import Yuuz12Api
 
 
 class Bangumi(Yuuz12Api):
-    def __init__(self, client: httpx.AsyncClient):
+    def __init__(self, **kwargs):
         super().__init__(
-            client=client,
             nodes=["Bangumi"],
-            key_name="Bangumi"
+            key_name="Bangumi",
+            **kwargs
         )
 
 

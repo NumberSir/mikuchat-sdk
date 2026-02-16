@@ -1,0 +1,17 @@
+from ._api import Yuuz12Api
+from ..models import ResponseModel
+
+class BaiduCensor(Yuuz12Api):
+    """百度相关"""
+    def __init__(self, **kwargs): super().__init__(**kwargs)
+    """图片色情内容审核"""
+    async def censor(self, imgurl: str): ...
+
+    @property
+    def data(self) -> dict: ...
+    @property
+    def raw_code(self) -> int: ...
+    @property
+    def error(self) -> bool: ...
+    @property
+    def model(self) -> "ResponseModel": ...

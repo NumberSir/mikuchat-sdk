@@ -1,6 +1,9 @@
-class Cave:
+from ._api import Yuuz12Api
+from ..models import ResponseModel
+
+class Cave(Yuuz12Api):
     """回声洞"""
-    def __init__(self, client): ...
+    def __init__(self, **kwargs): super().__init__(**kwargs)
     """随机获取回声"""
     async def get_cave(self): ...
     """传入回声"""
@@ -24,3 +27,5 @@ class Cave:
     def raw_code(self) -> int: ...
     @property
     def error(self) -> bool: ...
+    @property
+    def model(self) -> "ResponseModel": ...

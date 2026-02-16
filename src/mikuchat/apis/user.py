@@ -1,23 +1,21 @@
-import httpx
-
 from ._api import Yuuz12Api
 
 
 class User(Yuuz12Api):
-    def __init__(self, client: httpx.AsyncClient):
+    def __init__(self, **kwargs):
         super().__init__(
-            client=client,
             nodes=["user"],
-            key_name="user"
+            key_name="user",
+            **kwargs
         )
 
 
 class UserCheck(Yuuz12Api):
-    def __init__(self, client: httpx.AsyncClient):
+    def __init__(self, **kwargs):
         super().__init__(
-            client=client,
             nodes=["user", "check"],
-            key_name="user_check"
+            key_name="user_check",
+            **kwargs
         )
 
 

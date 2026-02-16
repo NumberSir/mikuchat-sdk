@@ -1,13 +1,12 @@
-import httpx
 from ._api import Yuuz12Api
 
 
 class BaiduCensor(Yuuz12Api):
-    def __init__(self, client: httpx.AsyncClient):
+    def __init__(self, **kwargs):
         super().__init__(
-            client=client,
             nodes=["baidu", "img_censor"],
-            key_name="baidu_imgcensor"
+            key_name="censor_imgcensor",
+            **kwargs
         )
 
 

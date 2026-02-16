@@ -1,31 +1,30 @@
 from ._api import Yuuz12Api
-import httpx
 
 
 class MinecraftPing(Yuuz12Api):
-    def __init__(self, client: httpx.AsyncClient):
+    def __init__(self, **kwargs):
         super().__init__(
-            client=client,
             nodes=["minecraft"],
-            key_name="minecraft_ping"
+            key_name="minecraft_ping",
+            **kwargs
         )
 
 
 class MinecraftServer(Yuuz12Api):
-    def __init__(self, client: httpx.AsyncClient):
+    def __init__(self, **kwargs):
         super().__init__(
-            client=client,
             nodes=["minecraft", "server"],
-            key_name="minecraft_server"
+            key_name="minecraft_server",
+            **kwargs
         )
 
 
 class MinecraftBlacklist(Yuuz12Api):
-    def __init__(self, client: httpx.AsyncClient):
+    def __init__(self, **kwargs):
         super().__init__(
-            client=client,
             nodes=["minecraft", "blacklist"],
-            key_name="minecraft_blacklist"
+            key_name="minecraft_blacklist",
+            **kwargs
         )
 
 

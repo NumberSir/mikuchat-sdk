@@ -1,6 +1,9 @@
-class Email:
+from ._api import Yuuz12Api
+from ..models import ResponseModel
+
+class Email(Yuuz12Api):
     """邮件"""
-    def __init__(self, client): ...
+    def __init__(self, **kwargs): super().__init__(**kwargs)
     """桐乃"""
     async def Kirino(self, qq: int, title: str, body: str, *, method: str = "POST"): ...
     """纨素"""
@@ -12,3 +15,5 @@ class Email:
     def raw_code(self) -> int: ...
     @property
     def error(self) -> bool: ...
+    @property
+    def model(self) -> "ResponseModel": ...
