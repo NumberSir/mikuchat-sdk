@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
+from ._api import MikuChatApi
 
 
-class User(Yuuz12Api):
+class User(MikuChatApi):
     def __init__(self, **kwargs):
         super().__init__(
             nodes=["user"],
@@ -10,7 +10,7 @@ class User(Yuuz12Api):
         )
 
 
-class UserCheck(Yuuz12Api):
+class UserCheck(MikuChatApi):
     def __init__(self, **kwargs):
         super().__init__(
             nodes=["user", "check"],

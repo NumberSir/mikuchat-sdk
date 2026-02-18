@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
 from ..models import ResponseModel
+from ._api import MikuChatApi
 
-class Email(Yuuz12Api):
+class Email(MikuChatApi):
     """邮件"""
     def __init__(self, **kwargs): super().__init__(**kwargs)
     """桐乃"""

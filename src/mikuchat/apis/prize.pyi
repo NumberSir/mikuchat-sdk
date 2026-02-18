@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
 from ..models import ResponseModel
+from ._api import MikuChatApi
 
-class Prize(Yuuz12Api):
+class Prize(MikuChatApi):
     """抽奖"""
     def __init__(self, **kwargs): ...
     """投入通用货币"""

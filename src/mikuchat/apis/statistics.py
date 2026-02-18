@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
+from ._api import MikuChatApi
 
 
-class Statistics(Yuuz12Api):
+class Statistics(MikuChatApi):
     def __init__(self, **kwargs):
         super().__init__(
             nodes=["statistics"],

@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
 from ..models import ResponseModel
+from ._api import MikuChatApi
 
-class Statistics(Yuuz12Api):
+class Statistics(MikuChatApi):
     """统计数据"""
     def __init__(self, **kwargs): ...
     """调用统计"""

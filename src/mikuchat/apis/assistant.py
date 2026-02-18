@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
+from ._api import MikuChatApi
 
 
-class Assistant(Yuuz12Api):
+class Assistant(MikuChatApi):
     def __init__(self, **kwargs):
         super().__init__(
             nodes=["Assistant", "Qwen"],

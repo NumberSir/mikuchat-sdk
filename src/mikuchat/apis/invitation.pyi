@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
 from ..models import ResponseModel
+from ._api import MikuChatApi
 
-class Invitation(Yuuz12Api):
+class Invitation(MikuChatApi):
     """邀请码相关"""
     def __init__(self, **kwargs): ...
     """获取邀请码"""

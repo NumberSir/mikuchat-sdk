@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
+from ._api import MikuChatApi
 
 
-class MinecraftPing(Yuuz12Api):
+class MinecraftPing(MikuChatApi):
     def __init__(self, **kwargs):
         super().__init__(
             nodes=["minecraft"],
@@ -10,7 +10,7 @@ class MinecraftPing(Yuuz12Api):
         )
 
 
-class MinecraftServer(Yuuz12Api):
+class MinecraftServer(MikuChatApi):
     def __init__(self, **kwargs):
         super().__init__(
             nodes=["minecraft", "server"],
@@ -19,7 +19,7 @@ class MinecraftServer(Yuuz12Api):
         )
 
 
-class MinecraftBlacklist(Yuuz12Api):
+class MinecraftBlacklist(MikuChatApi):
     def __init__(self, **kwargs):
         super().__init__(
             nodes=["minecraft", "blacklist"],

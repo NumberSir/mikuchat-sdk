@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
 from ..models import ResponseModel
+from ._api import MikuChatApi
 
-class Cave(Yuuz12Api):
+class Cave(MikuChatApi):
     """回声洞"""
     def __init__(self, **kwargs): super().__init__(**kwargs)
     """随机获取回声"""

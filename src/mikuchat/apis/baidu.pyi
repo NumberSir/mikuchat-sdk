@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
 from ..models import ResponseModel
+from ._api import MikuChatApi
 
-class BaiduCensor(Yuuz12Api):
+class BaiduCensor(MikuChatApi):
     """百度相关"""
     def __init__(self, **kwargs): super().__init__(**kwargs)
     """图片色情内容审核"""

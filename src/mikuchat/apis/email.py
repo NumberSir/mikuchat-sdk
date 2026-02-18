@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
+from ._api import MikuChatApi
 
 
-class Email(Yuuz12Api):
+class Email(MikuChatApi):
     def __init__(self, **kwargs):
         super().__init__(
             nodes=["email"],

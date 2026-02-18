@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
+from ._api import MikuChatApi
 
 
-class BaiduCensor(Yuuz12Api):
+class BaiduCensor(MikuChatApi):
     def __init__(self, **kwargs):
         super().__init__(
             nodes=["baidu", "img_censor"],

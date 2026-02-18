@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
 from ..models import ResponseModel
+from ._api import MikuChatApi
 
-class Bangumi(Yuuz12Api):
+class Bangumi(MikuChatApi):
     """番剧搜索"""
     def __init__(self, **kwargs): super().__init__(**kwargs)
     """搜索"""

@@ -8,10 +8,9 @@ from ..config import config
 from ..models import ResponseModel
 
 
-
-class Yuuz12Api:
+class MikuChatApi:
     """
-    Provides an interface for interacting with the Yuuz12 API.
+    Provides an interface for interacting with the MikuChat API.
 
     This class allows asynchronous API calls and provides access to response data and status.
 
@@ -108,7 +107,7 @@ class Yuuz12Api:
                 case _:
                     raise TypeError(f"Unsupported method {method} in API call")
 
-            logger.debug(f"\nYuuz12 Api called: {response.url}")
+            logger.debug(f"\nMikuChatApi called: {response.url}")
             self._response = response
             self._raw_content = self.response.content
             try:
@@ -161,5 +160,5 @@ class Yuuz12Api:
 
 
 __all__ = [
-    "Yuuz12Api"
+    "MikuChatApi"
 ]

@@ -1,7 +1,7 @@
-from ._api import Yuuz12Api
 from ..models import ResponseModel
+from ._api import MikuChatApi
 
-class MinecraftPing(Yuuz12Api):
+class MinecraftPing(MikuChatApi):
     """服务器查询"""
     def __init__(self, **kwargs): ...
     """查询服务器数据"""

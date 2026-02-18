@@ -1,10 +1,9 @@
-from ._api import Yuuz12Api
 from typing import overload
 
 from ..models import ResponseModel
+from ._api import MikuChatApi
 
-
-class User(Yuuz12Api):
+class User(MikuChatApi):
     """用户类"""
     def __init__(self, **kwargs): ...
     """新建用户"""
