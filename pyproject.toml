@@ -1,6 +1,6 @@
 [project]
 name = "MikuChatSDK"
-version = "0.2.1"
+version = "0.3.0"
 description = "Python 3 SDK for MikuChat. Check https://doc.yuuz12.top/web/#/5/ "
 authors = [
     {name = "Number_Sir", email = "number_sir@126.com"},
