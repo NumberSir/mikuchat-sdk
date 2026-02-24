@@ -4,7 +4,7 @@ from json import JSONDecodeError
 import httpx
 from loguru import logger
 
-from ..config import config
+from ..config import get_config
 from ..models import ResponseModel
 from ..exceptions import MissingApiKeyException
 
@@ -37,7 +37,7 @@ class MikuChatApi:
 	BASE_URL_BOT = "https://bot.miku.chat/api"
 	BASE_URL_FST = "https://skin.fstmc.top/api"
 
-	def __init__(self, client: httpx.AsyncClient = httpx.AsyncClient(), version: int = config.api_version, nodes: list[str] = None, key_name: str = None):
+	def __init__(self, client: httpx.AsyncClient = httpx.AsyncClient(), version: int = get_config().api_version, nodes: list[str] = None, key_name: str = None):
 		self._client = client
 
 		self._version = version
@@ -99,7 +99,7 @@ class MikuChatApi:
 			"""
 			url = f"{self._base_url}/{api_name}"
 			try:
-				kwargs |= {"key": config.api_key[self._version]}
+				kwargs |= {"key": get_config().api_key[self._version]}
 			except KeyError as e:
 				raise MissingApiKeyException
 
