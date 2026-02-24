@@ -5,11 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Config(BaseSettings):
-	model_config = SettingsConfigDict(
-		env_prefix="MIKUCHAT_",
-		env_file=".env",
-		env_file_encoding="utf-8",
-	)
+	model_config = SettingsConfigDict(env_prefix="MIKUCHAT_")
 
 	is_debug: bool = Field(default=False)
 	api_version: int = Field(default=2)
