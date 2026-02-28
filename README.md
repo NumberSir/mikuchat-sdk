@@ -1,5 +1,5 @@
 # MikuChat-Api
-> 详细接口调用文档地址: https://doc.yuuz12.top/web/#/5/103
+> 详细接口调用文档地址: https://doc.yuuz12.top/web/#/5/58
 
 ## 简介
 全异步编写，可调用 MikuChat-Api
